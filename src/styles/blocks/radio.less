@@ -1,0 +1,40 @@
+.radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: aqua;
+    font-size: large;
+    font-size: 50px;
+    &__item {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 23px;
+        min-height: 23px;
+        color: black;
+        cursor: pointer;
+    }
+    &__input {
+        display: none;
+        &:checked {
+            & ~ .radio__marker {
+                background-color: black;
+            }
+        }
+    }
+    &__marker{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 23px;
+        height: 2px;
+        border: 2px solid black;
+        border-radius: 50%;
+        padding: 3px;
+        background-clip: content-box;
+        background-color: transparent;
+        transition: background-color 0.2s;
+    }
+}

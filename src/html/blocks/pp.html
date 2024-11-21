@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ppstyles.css">
+</head>
+<body>
+    <div class="pp-container">
+        <h2 class="pp-title">Заполните форму<br />и мы подберём площадку</h2>
+        <form class="pp_form form">
+            <div class="radio">
+                <label class="radio__item">
+                    <input type="radio" name="format" value="master-class" class="radio__input">
+                    <span class="radio__marker"></span>
+                    <span class="radio__label">Мастер-класс/семинар</span>
+                </label>
+                <label class="radio__item">
+                    <input type="radio" name="format" value="concert" class="radio__input">
+                    <span class="radio__marker"></span>
+                    <span class="radio__label">Концерт/выступление</span>
+                </label>
+                <label class="radio__item">
+                    <input type="radio" name="format" value="pokaz" class="radio__input">
+                    <span class="radio__marker"></span>
+                    <span class="radio__label">Выставка/показ</span>
+                </label>
+                <label class="radio__item">
+                    <input type="radio" name="format" value="other" class="radio__input">
+                    <span class="radio__marker"></span>
+                    <span class="radio__label">Другое</span>
+                </label>
+            </div>
+            <label class="field"></label>
+            <label class="field">
+                <span class="field__title">Планируемое количество посетителей: </span>
+                <select name="amount" class="field__select">
+                    <option value="20">до 20 человек</option>
+                    <option value="100">от 20 до 100 человек</option>
+                    <option value="500">от 100 до 500 человек</option>
+                    <option value="1000">более 500</option>
+                </select>
+            </label>
+        </form>
+
+    </div>
+</body>
+</html>
