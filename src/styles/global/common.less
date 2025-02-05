@@ -9,7 +9,7 @@ html,body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #dedede;
+    background-color: @white;
     background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
     background-position: 0 0, 0 0;
     background-size: auto, 100% auto;
@@ -22,6 +22,10 @@ html,body {
     line-height: 1.375;
     overflow-x: hidden;
     padding-top: 147px;
+    @media @bw1660 {
+      padding-top: 111px;
+
+    }
   }
 
   .main {

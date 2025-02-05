@@ -11,11 +11,27 @@
   &__events-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 59px;
-    margin: 0 -30px -120px;
+    gap: 120px 59px;
+    // margin: 0 -30px -120px;
   }
-  &__event-card {
-    width: calc(33.3333%-60px);
-    margin: 0 30 120px;
+  &__more {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &-p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.79px;
+      margin: 71px 0 18px;
+      cursor: pointer;
+    }
+    &-icon {
+      cursor: pointer;
+    }
   }
+  // &__event-card {
+  //   width: calc(33.3333%-60px);
+  //   margin: 0 30 120px;
+  // }
 }
