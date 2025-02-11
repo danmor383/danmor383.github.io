@@ -1491,6 +1491,27 @@ textarea {
   padding-left: 40px;
   padding-right: 40px;
 }
+.about__title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 200px auto 150px;
+  max-width: 624px;
+}
+.about__block1 {
+  display: grid;
+  gap: 50px;
+}
+.about__block1-title {
+  font-weight: 700;
+  font-size: 44px;
+  margin: 0;
+}
+.about__block1-text {
+  margin: 0 0 100px auto;
+  max-width: 867px;
+  font-size: 18px;
+  font-weight: 400;
+}
 .about__block2 {
   display: grid;
   grid-template-columns: 1fr 400px;
@@ -1558,14 +1579,17 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
 }
-.about__block3-text {
-  font-size: 18px;
-  font-weight: 400;
+.about__block3-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.about__block3-link {
-  display: block;
-  width: 100%;
-  bottom: 0;
+.about__block3-content-text {
+  top: 50%;
 }
 .promo {
   display: -webkit-box;
@@ -1616,6 +1640,7 @@ textarea {
 }
 .promo__title3 {
   margin: 0  0 46px;
+  margin-left: 18px;
   font-size: 22px;
   font-weight: 400;
   font-family: "Lora", serif;
