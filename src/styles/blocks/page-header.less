@@ -13,6 +13,10 @@
         height: 111px;
     }
 
+    @media @bw768 {
+        height: 70px;
+    }
+
     &::before {
         content: "";
         display: block;
@@ -47,6 +51,10 @@
         @media @bw1660 {
             width: 152px;
             height: 111px;
+        }
+        @media @bw768 {
+            width: 96px;
+            height: 70px;
         }
         &-icon {
             width: 100%;
@@ -150,12 +158,14 @@
         align-items: center;
         width: 202px;
         z-index: 1;
-        // @media @bw1660 {
-        //     width: 111px;
-        // }
+        @media @bw1660 {
+            width: 152px;
+        }
         @media @bw1020 {
             margin-left: auto;
+            margin-right: -8px;
             width: auto;
+            gap: 30px;
         }
       }
     &__user-btn {
@@ -168,7 +178,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            // margin: 0 auto;
          }
     }
     &__user-icon {
