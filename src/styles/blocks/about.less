@@ -32,6 +32,12 @@
         "title pic2"
         "text text";
         gap: 50px 60px;
+        @media @bw1340 {
+            grid-template-areas:
+            "pic1 pic1"
+            "title pic2"
+            "text pic2";
+        }
     }
     &__picture {
         grid-area: pic1;

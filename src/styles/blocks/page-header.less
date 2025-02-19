@@ -73,13 +73,15 @@
             left: 0;
             padding: 211px 30px 30px;
             flex-direction: column;
-            gap: 30px;
+            // gap: 30px;
             width: 100%;
             height: 100vh;
             background-color: fade(@gray, 98%);
-            transform: translateX(-100%);
-            transform: translateX(0);
             transition: transform 0.4s;
+            transform: translateX(-100%);
+            overflow-x: hidden;
+            overflow-y: auto;
+
         }
         &-link {
             margin: 0 25px;
@@ -92,9 +94,10 @@
             transition: color 0.2s;
             @media @bw1020 {
                 box-sizing: border-box;
-                margin: 0;
+                margin: 0 0 40px;
                 padding: 5px 0;
                 font-size: 16px;
+                line-height: 22px;
             }
         }
         &-link:hover {
@@ -122,6 +125,10 @@
                 border: 0;
                 width: 40px;
                 height: 40px;
+
+            }
+            @media @bw768 {
+                margin-left: 5px;
             }
             &::before,
             &::after {
@@ -148,6 +155,34 @@
                 height: 2px;
                 border-radius: 2px;
                 background-color: @black;
+            }
+        }
+        &-user {
+            display: none;
+            @media @bw1020 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 5px;
+                gap: 25px;
+            }
+            &-link {
+                text-decoration: none;
+                @media @bw1020 {
+                    margin: auto 0;
+
+                }
+            }
+        }
+        &-logout {
+            width: 24px;
+            height: 24px;
+            font-size: 0;
+            &-icon {
+                @media @bw1020 {
+                    margin-top: 5px;
+                    align-items: center;
+                }
             }
         }
     }
@@ -179,6 +214,11 @@
             justify-content: center;
             align-items: center;
          }
+    }
+    &__user-btn:hover {
+        @media @bw1020 {
+            background-color: @gray;
+        }
     }
     &__user-icon {
         display: none;
