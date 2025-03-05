@@ -5,12 +5,15 @@
     @@include('blocks/page-header.html')
     <main class="main">
       @@include('blocks/promo.html')
+      @@include('blocks/offers.html', {"class": "promo__block"})
       @@include('blocks/about.html')
-      @@include('blocks/scroll.html')
+      <!-- @@include('blocks/scroll.html') -->
+      @@include('blocks/upcoming.html')
       <div class="home">
         @@include('blocks/blog-listing.html', {"class": "home__listing"})
       </div>
       @@include('blocks/contacts.html')
+      @@include('blocks/doit.html')
       <!-- @@include('blocks/events.html') -->
        <!-- @@include('blocks/event.html') -->
 
@@ -19,7 +22,15 @@
     @@include('blocks/page-footer.html')
 
     @@include('blocks/event-pp.html')
+    <!-- <script src="scripts/main.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/jquery.selectric.min.js"></script>
+    <script src="scripts/jquery.mask.min.js"></script>
+    <script src="scripts/air-datepicker.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script src="scripts/jquery.validation.min.js"></script>
+    <script src="scripts/jquery.validate-init.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
-  <script src="scripts/main.min.js"></script>
-  <script src="scripts/scroll.min.js"></script>
 </html>

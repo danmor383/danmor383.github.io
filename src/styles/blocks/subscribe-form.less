@@ -11,13 +11,18 @@
     }
     &__wrapper {
         display: flex;
+        -webkit-box-align: start;
+        align-items: flex-start;
         margin-bottom: 15px;
-        height: 50px;
+        // height: 50px;
         justify-content: end;
+        height: auto;
     }
     &__field-wrapper {
         display: flex;
         flex-grow: 1;
+        flex-direction: column;
+        position: relative;
 
 
     }
@@ -31,6 +36,7 @@
         padding: 15px 28px;
         font-size: 14px;
         line-height: 1.2;
+        color: @black !important;
         color: @black;
         &::placeholder {
             color: @gray;
@@ -55,9 +61,10 @@
         line-height: 1.36;
         font-weight: 400;
         cursor: pointer;
-
+        height: 49px;
     }
     &__check {
         margin: 0px;
+        position: relative;
     }
 }

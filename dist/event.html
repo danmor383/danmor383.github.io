@@ -3,10 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="formut-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale-1, maximum-scale=1, user-scalable=no">
+  <title>Lenni Art</title>
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия">
+
+  <meta property="og:title" content="Lenni Art" />
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом" />
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lenni-art.ru/" />
+
   <link rel="stylesheet" href="styles\styles.min.css">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> -->
+  <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assetsfavicons//apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+
+  <!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
 </head>
 
 <body class="body">
@@ -53,6 +75,7 @@
         </a>
         <button type="button" class="page-header__nav-toggle" id="js-navToggle">
           <div class="page-header__nav-toggle-line"></div>
+
         </button>
       </div>
 
@@ -92,7 +115,6 @@
     </div>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__liners"></div>
     <div class="page-footer__block">
       <div class="page-footer__block-links">
         <a href="#" class="page-footer__block-link">Календарь мероприятий</a>
@@ -101,7 +123,7 @@
         <a href="#" class="page-footer__block-link">Наши проекты</a>
         <a href="#" class="page-footer__block-link">Контакты</a>
       </div>
-      <form class="page-footer__subscribe-form subscribe-form">
+      <form class="page-footer__subscribe-form subscribe-form " id="js-subscribeForm" action="https://jsonplaceholder.typicode.com/posts">
         <h4 class="subscribe-form__title">Подпишись и будь в курсе происходящего</h4>
         <div class="subscribe-form__wrapper">
           <div class="subscribe-form__field-wrapper">
@@ -114,10 +136,7 @@
           <span class="check__mark"></span>
           <span class="check__label">Согласен на обработку персональных данных</span>
         </label>
-    </div>
-    </form>
-
-    </div>
+      </form>
     </div>
     <div class="page-footer__block2">
       <div class="page-footer__socials socials">
