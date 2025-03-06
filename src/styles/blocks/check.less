@@ -39,7 +39,7 @@
         width: 24px;
         height: 24px;
         border: 1px solid @black;
-    }  
+    }
     &__label {
         margin-left: 15px;
         font-weight: 300;
@@ -49,5 +49,22 @@
           font-size: 14px;
           line-height: 19px;
         }
+      }
+      &--red {
+        color: @red;
+        .check__mark {
+          border-color: @red;
+        }
+        .check__input {
+          &:checked {
+            & ~ .check__mark {
+              background-color: @red;
+            }
+          }
+        }
+      }
+      &--disabled {
+        pointer-events: none;
+        opacity: 0.5;
       }
   }
