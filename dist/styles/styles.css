@@ -1775,7 +1775,6 @@ textarea {
           box-sizing: border-box;
   display: inline-block;
   min-width: 20px;
-  color: #BC3324;
   white-space: pre;
 }
 .content ol > li,
@@ -4609,6 +4608,9 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
 }
+.reserve__order {
+  grid-area: order;
+}
 .reserve__order-title {
   margin: 0 0 20px;
 }
@@ -4653,6 +4655,7 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 .reserve__legend {
+  grid-area: legend;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4685,6 +4688,62 @@ button.swiper-pagination-bullet {
   height: 24px;
   background-color: #1f1e1e;
   left: -33px;
+}
+.reserve__legend-title {
+  margin: 0 0 23px;
+}
+.reserve__places {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 18px;
+}
+.reserve__places > p {
+  margin: 0;
+}
+.reserve__free {
+  position: relative;
+}
+.reserve__free::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: solid 1px #BC3324;
+  left: -45px;
+}
+.reserve__free::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: solid 1px #1f1e1e;
+  left: -57px;
+}
+.reserve__booked {
+  position: relative;
+}
+.reserve__booked::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #DEDEDE;
+  left: -53px;
+}
+.scene__table {
+  cursor: pointer;
+  color: #1f1e1e;
+}
+.scene__table--red {
+  color: #BC3324;
 }
 @media (max-width: 1659px) {
   body {
@@ -5036,6 +5095,12 @@ button.swiper-pagination-bullet {
   .page-footer {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .page-footer__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .event-card__title {
     min-height: 44px;
