@@ -81,6 +81,12 @@
         grid-template-areas:
         "copyright socials create"
         "links socials create";
+        @media @bw1020 {
+            grid-template-areas: 
+            "socials socials socials"
+            "copyright copyright create"
+            "links links create";
+        }
         &-link  {
             text-decoration: none;
             font-weight: 600;
@@ -89,6 +95,9 @@
     }
     &__socials {
         grid-area: socials;
+        @media @bw1020 {
+            margin: 0 auto 60px;
+        }
         // background-color: @black;
 
         // stroke: @white;
@@ -98,10 +107,16 @@
         display: flex;
         gap: 60px;
         align-self: flex-end;
+        @media @bw1020 {
+            gap: 15px;
+        }
     }
     &__copyright {
         grid-area: copyright;
         align-self: flex-start;
+        @media @bw1020 {
+            margin-bottom: 15px;;
+        }
     }
     &__create {
         grid-area: create;

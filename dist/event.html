@@ -85,7 +85,7 @@
   <main class="main">
     <div class="event">
       <div class="event__container">
-        <p>Главная / Мероприятия / Вечер | The Best of Sade </p>
+        <p class="event-url">Главная / Мероприятия / Вечер | The Best of Sade </p>
         <div class="event__promo">
           <h2 class="event__promo-title"> Вечер | The Best of Sade</h2>
           <div class="event__promo-time">
@@ -94,7 +94,7 @@
               <span>КАФЕ «ПТИЧКА»</span>
             </p>
             <picture class="event__promo-pic">
-              <img src="assets/images/картинки (2).jpg" alt="stuff">
+              <img src="assets/images/картинки (2).jpg" alt="stuff" class="event__promo-img">
             </picture>
             <div class="event__promo-time-right">
               <div>
@@ -105,40 +105,45 @@
                 ЛЕНИНА 10 | 2 ЭТАЖ
               </div>
             </div>
+
           </div>
         </div>
         <div class="event__content content">
-          <h5>Программа мероприятия: </h5>
-          <ul>
-            <li>20:15 — Приветствие гостей</li>
-            <li>20:30 — Первая подача блюд | Салаты</li>
-            <li>20:40 — Живой вокал | Композиции 1-3</li>
-            <li>21:20 — Подача горячих блюд</li>
-            <li>21:30 — Живой вокал | Композиции 4-7</li>
-            <li>22:15 — Подача десерта</li>
-            <li>22:30 — Живой вокал | Композиции 8-9</li>
-            <li>23:00 — Завершение вечера</li>
-          </ul>
-          <h5>The Best Of Sade</h5>
-          <p>Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки. </p>
-          <p>Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры.</p>
-          <p>Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов копий в Европе.</p>
-          <ol>
-            <li>Your Love Is King</li>
-            <li>Hang On To Your Love</li>
-            <li>Smooth Operator</li>
-            <li>Jezebel</li>
-            <li>The Sweetest Taboo</li>
-            <li>Is It A Crime</li>
-            <li>Never As Good As The First Time</li>
-            <li>Love Is Stronger Than Pride</li>
-            <li>Paradise</li>
-          </ol>
+          <div class="event__block1">
+            <h5 class="event__block1-title">Программа мероприятия: </h5>
+            <ul>
+              <li>20:15 — Приветствие гостей</li>
+              <li>20:30 — Первая подача блюд | Салаты</li>
+              <li>20:40 — Живой вокал | Композиции 1-3</li>
+              <li>21:20 — Подача горячих блюд</li>
+              <li>21:30 — Живой вокал | Композиции 4-7</li>
+              <li>22:15 — Подача десерта</li>
+              <li>22:30 — Живой вокал | Композиции 8-9</li>
+              <li>23:00 — Завершение вечера</li>
+            </ul>
+          </div>
+          <div class="event__block2">
+            <h5 class="event__block2-title">The Best Of Sade</h5>
+            <p>Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые популярные хиты группы, раритеты и их любимые треки. </p>
+            <p>Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры. Она лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав более 2 миллионов копий в Европе.</p>
+            <ol>
+              <li>Your Love Is King</li>
+              <li>Hang On To Your Love</li>
+              <li>Smooth Operator</li>
+              <li>Jezebel</li>
+              <li>The Sweetest Taboo</li>
+              <li>Is It A Crime</li>
+              <li>Never As Good As The First Time</li>
+              <li>Love Is Stronger Than Pride</li>
+              <li>Paradise</li>
+            </ol>
+          </div>
         </div>
         <form class="reserve">
           <div class="reserve__checks">
             <h4 class="reserve__section-title">
-              Забронировать столик
+              Забронировать
+              <br class="reserve__section-br">столик
             </h4>
             <label class="reserve__check check check--red">
               <input type="checkbox" name="table_1" class="check__input js-reserveCheck" data-type="red" />
@@ -424,6 +429,7 @@
       </div>
     </div>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__liners"></div>
     <div class="page-footer__block">

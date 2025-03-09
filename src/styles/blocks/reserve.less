@@ -1,5 +1,6 @@
 .reserve {
     display: grid;
+    margin-top: 80px;
     gap: 65px 11%;
     grid-template-columns: 405px calc(89% - 405px);
     grid-template-areas:
@@ -11,6 +12,7 @@
         grid-template-columns: 340px calc(93.5% - 340px);
     }
     @media @bw1020 {
+      margin-top: 54px;
         gap: 60px;
         grid-template-columns: auto 390px;
         grid-template-areas:
@@ -26,10 +28,23 @@
           "checks"
           "order";
     }
-    &__section-title {
-        margin: 0 0 30px;
-        font-size: 18px;
-        font-weight: 700;
+    &__section{
+      &-title {
+          margin: 0 0 30px;
+          font-size: 18px;
+          font-weight: 700;
+          @media @bw1020 {
+            margin: 0 0 15px;
+            font-size: 16px;
+          }
+          
+      }
+      &-br {
+        display: none;
+        @media @bw1020 {
+          display: block;
+        }
+      }
     }
     &__checks {
         grid-area: checks;
@@ -135,10 +150,14 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @media @bw600 {
+          align-items: flex-start;
+        }
       }
       &__price {
         &-red {
             position: relative;
+            margin-left: 33px;
             &::before {
                 content: "";
                 position: absolute;
@@ -150,6 +169,7 @@
         }
         &-black {
             position: relative;
+            margin-left: 33px;
             &::before {
                 content: "";
                 position: absolute;
@@ -166,6 +186,7 @@
       &__places {
         display: flex;
         flex-direction: column;
+        margin-left: 57px;
         gap: 18px;
         & > p {
           margin: 0;
@@ -201,7 +222,7 @@
           height: 24px;
           border-radius: 50%;
           background-color: @gray;
-          left: -53px;
+          left: -55px;
         }
       }
 
