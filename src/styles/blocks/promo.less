@@ -7,13 +7,34 @@
         font-size: 45px;
         font-weight: 400;
         font-family: @font2;
+        @media @bw1660 {
+            font-size: 35px;
+        }
+        @media @bw1170 {
+            font-size: 30px;
+        }
+        @media @bw600 {
+            font-size: 13px;
+        }
     }
     &__title1 {
         margin: 100px auto 70px;
+        @media @bw1170 {
+            margin: 80px auto 51px;
+        }
+        @media @bw600 {
+            margin: 80px auto 29px
+        }
     }
     &__title2 {
         margin: 70px auto 100px;
         text-align: center;
+        @media @bw1170 {
+            margin: 73px auto 49px;
+        }
+        @media @bw600 {
+            margin: 40px auto 28px
+        }
     }
     &__block {
         display: flex;

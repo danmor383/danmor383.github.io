@@ -59,6 +59,9 @@
         &-icon {
             width: 100%;
             height: 100%;
+            @media @bw400 {
+                margin-left: -20px;
+            }
         }
     }
     &__nav {
@@ -202,7 +205,10 @@
             margin-left: auto;
             margin-right: -8px;
             width: auto;
-            gap: 30px;
+            gap: 20px;
+        }
+        @media @bw400 {
+            gap: 0;
         }
       }
     &__user-btn {

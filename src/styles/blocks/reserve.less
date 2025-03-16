@@ -37,7 +37,7 @@
             margin: 0 0 15px;
             font-size: 16px;
           }
-          
+
       }
       &-br {
         display: none;
@@ -143,6 +143,9 @@
       }
       &__submit {
         width: 100%;
+        @media @bw600{
+          font-size: 14px;
+        }
       }
 
       &__legend {
@@ -155,6 +158,9 @@
         }
       }
       &__price {
+        @media @bw600 {
+          font-size: 14px;
+        }
         &-red {
             position: relative;
             margin-left: 33px;
@@ -188,6 +194,9 @@
         flex-direction: column;
         margin-left: 57px;
         gap: 18px;
+        @media @bw600 {
+          font-size: 14px;
+        }
         & > p {
           margin: 0;
         }

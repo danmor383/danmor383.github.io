@@ -9,7 +9,7 @@
     });
 
     const eventPP = document.querySelector('#js-eventPP');
-
+    console.log(eventPP);
     if (eventPP) {
         const eventOpenBtn = document.querySelector('#js-eventOpenBtn');
 
@@ -46,6 +46,7 @@
       new Swiper(swpr, {
         updateOnWindowResize: true,
         slidesPerView: "auto",
+        loop: true,
         freeMode: true,
         spaceBetween: 0,
         speed: 500,

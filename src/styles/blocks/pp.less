@@ -11,6 +11,13 @@
     overflow-y: auto;
     z-index: 110;
     display: none;
+    @media @bw1340 {
+      padding: 90px 40px 50px;
+    }
+    @media @bw768 {
+      padding: 80px 20px 40px;
+    }
+
     &__wrapper {
       box-sizing: border-box;
       position: relative;
@@ -31,6 +38,9 @@
       max-width: 950px;
       margin: 0 auto;
       padding: 0 40px 40px;
+      @media @bw600 {
+        padding: 0 20px 40px;
+      }
     }
     &__sticky-close {
         position: sticky;
@@ -43,6 +53,10 @@
         position: absolute;
         top: -30px;
         right: -30px;
+        @media @bw768 {
+          top: -15px;
+          right: -15px;
+        }
       }
       &__title {
         box-sizing: border-box;
@@ -50,7 +64,8 @@
         align-items: center;
         margin: -40px 0 70px -85px;
         padding: 10px 85px;
-        width: 595px;
+        max-width: 595px;
+        width: 100%;
         min-height: 80px;
         background-color: @black;
         text-transform: uppercase;
@@ -61,6 +76,20 @@
         color: @white;
         letter-spacing: 0.02em;
         z-index: 1;
+        @media @bw1170 {
+          padding: 10px 60px 10px 20px;
+          margin-left: 0;
+          max-width: 465px;
+        }
+        @media @bw768 {
+          margin: -40px 0 40px;
+          font-size: 18px;
+        }
+        @media @bw500 {
+          margin-right: 25px;
+          width: auto;
+          font-size: 14px;
+        }
       }
       .field {
   &__date {

@@ -83,12 +83,10 @@
   </header>
 
   <main class="main">
-    <!-- <div class="home"> -->
-
-    <!-- </div> -->
     <div class="events">
       <section class="listing events__listing">
-        <h2 class="listing__title section-title">Мероприятия</h2>
+        <p class="event-url">Главная / Мероприятия</p>
+        <h2 class="events__title section-title">Мероприятия</h2>
         <div class="listing__events-list">
           <!-- prettier-ignore -->
           <article class="event-card listing__event-card">
@@ -154,19 +152,14 @@
 
         </div>
         <div class="listing__more">
-          <p class="listing__more-p">Показать ещё</p>
-          <svg class="listing__more-icon" width="60" height="91" viewBox="0 0 62 92" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.78681 40C5.59124 44.1781 2.73401 49.5013 1.57646 55.2966C0.418903 61.0918 1.013 67.0986 3.28363 72.5576C5.55426 78.0166 9.39943 82.6824 14.3329 85.9651C19.2664 89.2479 25.0666 91 31 91C36.9334 91 42.7336 89.2479 47.6671 85.9651C52.6006 82.6824 56.4457 78.0166 58.7164 72.5576C60.987 67.0986 61.5811 61.0918 60.4235 55.2965C59.266 49.5013 56.4088 44.1781 52.2132 40" stroke="#1F1E1E" stroke-width="2" stroke-linecap="round" />
-            <g clip-path="url(#clip0_38294_1926)">
-              <path d="M31 5L31 65" stroke="#1F1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M38 58L31 65L24 58" stroke="#1F1E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-            <defs>
-              <clipPath id="clip0_38294_1926">
-                <rect width="70" height="24" fill="white" transform="translate(43) rotate(90)" />
-              </clipPath>
-            </defs>
-          </svg>
+          <a href="#" class="events__link link">
+            <p class="listing__more-p">Показать ещё</p>
+            <svg id="arrow" class="arrow__icon arrow__icon--90" width="92" height="62" viewBox="0 0 92 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 52.2132C44.1781 56.4088 49.5013 59.266 55.2966 60.4235C61.0918 61.5811 67.0986 60.987 72.5576 58.7164C78.0166 56.4457 82.6824 52.6006 85.9651 47.6671C89.2479 42.7336 91 36.9334 91 31C91 25.0666 89.2479 19.2664 85.9651 14.3329C82.6824 9.39943 78.0166 5.55425 72.5576 3.28363C67.0986 1.013 61.0918 0.4189 55.2965 1.57646C49.5013 2.73401 44.1781 5.59123 40 9.78681" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M5 31L65 31" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M58 24L65 31L58 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
       </section>
       <div>
@@ -187,9 +180,9 @@
           <tbody class="table__tbody">
             <tr class="table__tr">
               <th class="table__tbody-th">Стоимость за час</th>
-              <td class="table__td">1000 Р</td>
-              <td class="table__td">3000 Р</td>
-              <td class="table__td">от 6000 Р</td>
+              <td class="table__td table__td-price">1000 Р</td>
+              <td class="table__td table__td-price">3000 Р</td>
+              <td class="table__td table__td-price">от 6000 Р</td>
             </tr>
             <tr class="table__tr">
               <th class="table__tbody-th">Ведущий мероприятия</th>
@@ -305,7 +298,14 @@
               </td>
             </tr>
           </tbody>
-
+          <tfoot class="table__footer">
+            <tr class="table__footer-tr">
+              <th class="table__footer-th"></th>
+              <th class="table__footer-th">ТАРИФ «LIGHT»</th>
+              <th class="table__footer-th">ТАРИФ «PROMO»</th>
+              <th class="table__footer-th">ТАРИФ «ALL STARTS»</th>
+            </tr>
+          </tfoot>
         </table>
 
       </section>
@@ -315,7 +315,7 @@
       <h3 class="offers__title">Я ХОЧУ:</h3>
       <div class="offers__btns">
         <button class="offers__btn btn btn--red" id="js-eventOpenBtn">Провести мероприятие</button>
-        <button class="offers__btn btn">Стать арендатором</button>
+        <button class="offers__btn btn offers__btn2">Стать арендатором</button>
       </div>
     </div>
 
@@ -359,6 +359,111 @@
       </div>
     </div>
 
+    <div class="pp" id="js-eventPP">
+      <div class="pp__wrapper">
+        <div class="pp__sticky-close">
+          <button class="pp__x-btn x-btn js-ppCloseBtn">
+            <svg class="x-btn__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="pp__container">
+          <h2 class="pp__title">Заполните форму
+            <br />и мы подберем площадку
+          </h2>
+          <form class="pp__form form" id="js-eventForm">
+            <div class="form__list">
+              <div class="form__field form__field--w50 field">
+                <h6 class="field__title field__title--18">Формат мероприятия:</h6>
+                <div class="radio">
+                  <label class="radio__item">
+                    <input type="radio" name="format" value="master-class" class="radio__input">
+                    <span class="radio__mark"></span>
+                    <span class="radio__label">Мастер-класс/семинар</span>
+                  </label>
+                  <label class="radio__item">
+                    <input type="radio" name="format" value="concert" class="radio__input">
+                    <span class="radio__mark"></span>
+                    <span class="radio__label">Концерт/выступление</span>
+                  </label>
+                  <label class="radio__item">
+                    <input type="radio" name="format" value="pokaz" class="radio__input">
+                    <span class="radio__mark"></span>
+                    <span class="radio__label">Выставка/показ</span>
+                  </label>
+                  <label class="radio__item">
+                    <input type="radio" name="format" value="other" class="radio__input">
+                    <span class="radio__mark"></span>
+                    <span class="radio__label">Другое</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__group form__group--w50">
+                <label class="form__field field">
+                  <span class="field__title">Планируемое количество посетителей:</span>
+                  <select name="amount" class="field__select js-selectric">
+                    <option value="20">до 20 человек</option>
+                    <option value="100">от 20 до 100 человек</option>
+                    <option value="500">от 100 до 500 человек</option>
+                    <option value="1000">более 500</option>
+                  </select>
+                </label>
+                <div class="form__field form__field--mt30 field js-dateField">
+                  <h6 class="field__title">Дата проведения:</h6>
+                  <div class="field__date ">
+                    <div class="field__date-inputs">
+                      <input type="text" class="field__date-input js-dateDay" placeholder="ДД" readonly>
+                      <input type="text" class="field__date-input js-dateMonth" placeholder="ММ" readonly>
+                      <input type="text" class="field__date-input field__date-input--w110 js-dateYear" placeholder="ГГГГ" readonly>
+                    </div>
+                    <input class="field__date-picker js-dateInput" name="date" type="text" readonly required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__section">
+              <h6 class="field__title">Контактные данные:</h6>
+              <div class="form__list">
+                <label class="form__field form__field--w50 field ">
+                  <span class="field__label">Имя*</span>
+                  <input class="field__input" type="text" placeholder="Имя" name="Имя" required>
+                </label>
+                <label class="form__field form__field--w50 field ">
+                  <span class="field__label">Фамилия*</span>
+                  <input class="field__input" type="text" placeholder="Фамилия" name="Фамилия" required>
+                </label>
+                <label class="form__field form__field--w50 field ">
+                  <span class="field__label">Телефон*</span>
+                  <input class="field__input js-mobileMask" type="tel" placeholder="+7 (___) ___ __ __" name="Телефон" required>
+                </label>
+                <label class="form__field form__field--w50 field ">
+                  <span class="field__label">Email*</span>
+                  <input class="field__input" type="email" placeholder="Email" name="email" required>
+                </label>
+              </div>
+            </div>
+            <label class="form__field form__field--mt30 field">
+              <span class="field__title">Есть пожелания? Напишите нам:</span>
+              <textarea class="field__textarea" name="Пожелания"></textarea>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="agree" class="check__input" required checked />
+              <span class="check__mark"></span>
+              <span class="check__label check__label--s">
+                Я соглашаюсь с пользовательским соглашением и с политикой
+                использования персональных данных
+              </span>
+            </label>
+            <div class="form__btns">
+              <button type="submit" class="form__btn btn">Отправить</button>
+              <button type="button" class="form__btn-close js-ppCloseBtn">Закрыть</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
   </main>
   <footer class="page-footer">
@@ -422,6 +527,7 @@
     </div>
   </footer>
 
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
